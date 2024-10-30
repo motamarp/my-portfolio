@@ -12,24 +12,38 @@ body {
 }
 
 header {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 20px;
+    padding: 0; /* Remove padding since we added padding in the header-container */
+}
+
+/* Header Container */
+.header-container {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center vertically */
+    background-color: black; /* Black background */
+    padding: 10px; /* Add padding for spacing */
+}
+
+/* Header Image Container */
+.header-image-container {
+    margin-right: 10px; /* Space between image and text */
 }
 
 .header-image-container img {
-    max-width: 100px; /* Adjust based on your design */
+    max-width: 100px; /* Adjust size of the image */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Site Title */
 .site-title {
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-    margin: 10px 0;
+    color: white; /* White text color */
+    margin: 0; /* Remove default margin */
 }
 
 .site-title a {
     text-decoration: none;
-    color: #333;
+    color: white; /* White text color for the link */
 }
 
 /* Filters Sidebar */
@@ -88,7 +102,7 @@ header {
 /* Posts */
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Wider minimum width for square boxes */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout with wider min width */
     gap: 20px;
     padding: 20px;
 }
@@ -99,25 +113,28 @@ header {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1; /* Ensure the boxes are square */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
+}
+
+.post-contents {
+    padding: 10px;
 }
 
 .post-image-container {
     text-align: center;
-    flex: 1; /* Allow the image container to grow */
 }
 
 .post-image-container img {
-    width: 100%; /* Ensure the image takes full width of the container */
-    height: 100%; /* Ensure height matches width for square boxes */
+    width: 100%; /* Ensure the image takes full width */
+    height: 100%; /* Maintain the square aspect ratio */
+    max-height: 200px; /* Limit height to keep posts uniform */
     object-fit: cover; /* Cover the area while maintaining aspect ratio */
 }
 
 .post-info-container {
-    padding: 10px; /* Padding for the text area */
-    text-align: center; /* Center the text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .post-title {
