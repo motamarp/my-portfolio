@@ -11,17 +11,16 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header */
 header {
-    padding: 0;
+    padding: 0; /* Remove padding since we added padding in the header-container */
 }
 
+/* Header Container */
 .header-container {
     display: flex; /* Align items in a row */
     align-items: center; /* Center vertically */
     background-color: black; /* Black background */
     padding: 10px; /* Add padding for spacing */
-    color: white; /* White text color */
 }
 
 /* Header Image Container */
@@ -38,6 +37,7 @@ header {
 .site-title {
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
+    color: white; /* White text color */
     margin: 0; /* Remove default margin */
 }
 
@@ -102,7 +102,7 @@ header {
 /* Posts */
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout with wider min width */
     gap: 20px;
     padding: 20px;
 }
@@ -115,19 +115,19 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.post-contents {
+    padding: 10px;
+}
+
 .post-image-container {
     text-align: center;
 }
 
 .post-image-container img {
     width: 100%; /* Ensure the image takes full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain the square aspect ratio */
     max-height: 200px; /* Limit height to keep posts uniform */
     object-fit: cover; /* Cover the area while maintaining aspect ratio */
-}
-
-.post-contents {
-    padding: 10px;
 }
 
 .post-info-container {
