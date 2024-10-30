@@ -88,7 +88,7 @@ header {
 /* Posts */
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Wider minimum width for square boxes */
     gap: 20px;
     padding: 20px;
 }
@@ -99,21 +99,25 @@ header {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.post-contents {
-    padding: 10px;
+    aspect-ratio: 1; /* Ensure the boxes are square */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
 }
 
 .post-image-container {
     text-align: center;
+    flex: 1; /* Allow the image container to grow */
+}
+
+.post-image-container img {
+    width: 100%; /* Ensure the image takes full width of the container */
+    height: 100%; /* Ensure height matches width for square boxes */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
 }
 
 .post-info-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    padding: 10px; /* Padding for the text area */
+    text-align: center; /* Center the text */
 }
 
 .post-title {
@@ -164,4 +168,3 @@ header {
 .filter-input-element input {
     margin-right: 5px;
 }
-
