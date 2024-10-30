@@ -1,89 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benny's List</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
 
 <header>
     <div class="header-container">
         <div class="header-image-container">
-            <img src="benny.jpg" alt="Benny logo">
+            <img src="Benny.jpg" alt="Benny">
         </div>
         <h1 class="site-title"><a href="#">Benny's List</a></h1>
     </div>
 </header>
 
-<main class="content">
-    <aside class="filter-container">
-        <h2>Filters</h2>
-        <div class="filter-input-container">
-            <label for="filter-text" class="filter-input-label">Text</label>
-            <div class="filter-input-element">
-                <input type="text" name="filter-text" id="filter-text" class="filter-input">
-            </div>
+<div class="filter-container">
+    <h2>Filters</h2>
+    <div class="filter-input-container">
+        <label class="filter-input-label">Search:</label>
+        <input type="text" class="filter-input">
+    </div>
+    <div class="filter-input-container">
+        <label class="filter-input-label">Price:</label>
+        <input type="text" class="filter-input" placeholder="Min">
+        <input type="text" class="filter-input" placeholder="Max">
+    </div>
+    <div class="filter-input-container">
+        <label class="filter-input-label">City:</label>
+        <select class="filter-input">
+            <option value="">Select a city</option>
+            <!-- Add options here -->
+        </select>
+    </div>
+    <fieldset class="filter-fieldset">
+        <legend>Condition</legend>
+        <div>
+            <input type="checkbox" id="new" name="condition">
+            <label for="new">New</label>
         </div>
-        <div class="filter-input-container">
-            <label for="filter-min-price" class="filter-input-label">Price</label>
-            <div class="filter-input-element">
-                <input type="text" name="filter-min-price" id="filter-min-price" class="filter-input" placeholder="min">
-            </div>
-            <div class="filter-input-element">
-                <input type="text" name="filter-max-price" id="filter-max-price" class="filter-input" placeholder="max">
-            </div>
+        <div>
+            <input type="checkbox" id="used" name="condition">
+            <label for="used">Used</label>
         </div>
-        <div class="filter-input-container">
-            <label for="filter-city" class="filter-input-label">City</label>
-            <div class="filter-input-element">
-                <select id="filter-city" class="filter-input" name="filter-city">
-                    <option selected value="">Any</option>
-                    <option>Corvallis</option>
-                    <option>Albany</option>
-                    <option>Eugene</option>
-                    <option>Portland</option>
-                    <option>Salem</option>
-                    <option>Bend</option>
-                </select>
-            </div>
-        </div>
-        <div class="filter-input-container">
-            <fieldset id="filter-condition" class="filter-fieldset">
-                <legend>Condition</legend>
-                <div>
-                    <input type="checkbox" name="filter-condition" id="filter-condition-new" value="new">
-                    <label for="filter-condition-new">New</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="filter-condition" id="filter-condition-excellent" value="excellent">
-                    <label for="filter-condition-excellent">Excellent</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="filter-condition" id="filter-condition-good" value="good">
-                    <label for="filter-condition-good">Good</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="filter-condition" id="filter-condition-fair" value="fair">
-                    <label for="filter-condition-fair">Fair</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="filter-condition" id="filter-condition-poor" value="poor">
-                    <label for="filter-condition-poor">Poor</label>
-                </div>
-            </fieldset>
-        </div>
-        <button id="filter-update-button" class="action-button">Update</button>
-    </aside>
+    </fieldset>
+    <button class="action-button">Update</button>
+</div>
 
-    <section id="posts">
-        <!-- Your post items here -->
-    </section>
-</main>
+<div id="posts">
+    <div class="post">
+        <div class="post-image-container">
+            <img src="image1.jpg" alt="Item 1">
+        </div>
+        <div class="post-contents">
+            <h2 class="post-title">Item 1</h2>
+            <div class="post-info-container">
+                <span class="post-price">$10</span>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-image-container">
+            <img src="image2.jpg" alt="Item 2">
+        </div>
+        <div class="post-contents">
+            <h2 class="post-title">Item 2</h2>
+            <div class="post-info-container">
+                <span class="post-price">$15</span>
+            </div>
+        </div>
+    </div>
+    <!-- Add more posts as needed -->
+</div>
 
-<button type="button" id="sell-something-button"><i class="fas fa-plus"></i></button>
+<button id="sell-something-button">+</button>
 
 </body>
 </html>
