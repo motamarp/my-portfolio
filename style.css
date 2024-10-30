@@ -20,7 +20,6 @@ header {
     display: flex; /* Align items in a row */
     align-items: center; /* Center vertically */
     background-color: black; /* Black background */
-    border: 2px solid black; /* Black border */
     padding: 10px; /* Add padding for spacing */
     color: white; /* White text color */
 }
@@ -116,10 +115,6 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.post-contents {
-    padding: 10px;
-}
-
 .post-image-container {
     text-align: center;
 }
@@ -129,6 +124,10 @@ header {
     height: auto; /* Maintain aspect ratio */
     max-height: 200px; /* Limit height to keep posts uniform */
     object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.post-contents {
+    padding: 10px;
 }
 
 .post-info-container {
