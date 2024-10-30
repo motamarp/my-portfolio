@@ -11,19 +11,18 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Header */
 header {
-    padding: 0; /* Remove padding since we added padding in the header-container */
+    padding: 0;
 }
 
-/* Header Container */
 .header-container {
     display: flex; /* Align items in a row */
     align-items: center; /* Center vertically */
     background-color: black; /* Black background */
+    border: 2px solid black; /* Black border */
     padding: 10px; /* Add padding for spacing */
-    width: 100%; /* Make it span full width */
-    position: relative; /* Keep it positioned correctly */
-    left: 0; /* Align to the left */
+    color: white; /* White text color */
 }
 
 /* Header Image Container */
@@ -40,7 +39,6 @@ header {
 .site-title {
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-    color: white; /* White text color */
     margin: 0; /* Remove default margin */
 }
 
@@ -105,7 +103,7 @@ header {
 /* Posts */
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout with wider min width */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout */
     gap: 20px;
     padding: 20px;
 }
@@ -128,7 +126,7 @@ header {
 
 .post-image-container img {
     width: 100%; /* Ensure the image takes full width */
-    height: 100%; /* Maintain the square aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     max-height: 200px; /* Limit height to keep posts uniform */
     object-fit: cover; /* Cover the area while maintaining aspect ratio */
 }
