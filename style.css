@@ -21,6 +21,9 @@ header {
     align-items: center; /* Center vertically */
     background-color: black; /* Black background */
     padding: 10px; /* Add padding for spacing */
+    width: 100%; /* Make it span full width */
+    position: relative; /* Keep it positioned correctly */
+    left: 0; /* Align to the left */
 }
 
 /* Header Image Container */
