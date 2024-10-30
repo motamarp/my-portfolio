@@ -1,0 +1,167 @@
+/* 
+ * Name: Paolo Mota Marques
+ * Email: motamarp@oregonstate.edu
+ */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-image-container img {
+    max-width: 100px; /* Adjust based on your design */
+}
+
+.site-title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Filters Sidebar */
+.filter-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.filter-input-container {
+    margin-bottom: 15px;
+}
+
+.filter-input-label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.filter-fieldset {
+    border: none;
+    padding: 0;
+}
+
+.filter-fieldset legend {
+    font-weight: bold;
+}
+
+.filter-fieldset div {
+    display: flex;
+    align-items: center;
+}
+
+.action-button {
+    background-color: #007BFF; /* Adjust based on your design */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Posts */
+#posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-contents {
+    padding: 10px;
+}
+
+.post-image-container {
+    text-align: center;
+}
+
+.post-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-title {
+    color: #007BFF; /* Adjust based on your design */
+    text-decoration: none;
+}
+
+.post-title:hover {
+    text-decoration: underline;
+}
+
+.post-price {
+    background-color: #e9ecef;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+/* Add-post Button */
+#sell-something-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745; /* Adjust based on your design */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#sell-something-button:hover {
+    transform: scale(1.1);
+}
+
+/* Additional Styles */
+.filter-input-element {
+    display: flex;
+    align-items: center;
+}
+
+.filter-input-element input {
+    margin-right: 5px;
+}
+
