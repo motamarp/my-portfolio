@@ -12,38 +12,24 @@ body {
 }
 
 header {
-    padding: 0; /* Remove padding since we added padding in the header-container */
-}
-
-/* Header Container */
-.header-container {
-    display: flex; /* Align items in a row */
-    align-items: center; /* Center vertically */
-    background-color: black; /* Black background */
-    padding: 10px; /* Add padding for spacing */
-}
-
-/* Header Image Container */
-.header-image-container {
-    margin-right: 10px; /* Space between image and text */
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
 }
 
 .header-image-container img {
-    max-width: 100px; /* Adjust size of the image */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100px; /* Adjust based on your design */
 }
 
-/* Site Title */
 .site-title {
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-    color: white; /* White text color */
-    margin: 0; /* Remove default margin */
+    margin: 10px 0;
 }
 
 .site-title a {
     text-decoration: none;
-    color: white; /* White text color for the link */
+    color: #333;
 }
 
 /* Filters Sidebar */
@@ -102,7 +88,7 @@ header {
 /* Posts */
 #posts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive layout with wider min width */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive layout */
     gap: 20px;
     padding: 20px;
 }
@@ -121,13 +107,6 @@ header {
 
 .post-image-container {
     text-align: center;
-}
-
-.post-image-container img {
-    width: 100%; /* Ensure the image takes full width */
-    height: 100%; /* Maintain the square aspect ratio */
-    max-height: 200px; /* Limit height to keep posts uniform */
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */
 }
 
 .post-info-container {
@@ -185,3 +164,4 @@ header {
 .filter-input-element input {
     margin-right: 5px;
 }
+
